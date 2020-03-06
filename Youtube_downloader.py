@@ -28,20 +28,20 @@ class GUI:
         self.label = Label(frameRow1, text="Select a codec ",font=("Helvetica", 13))
         self.label.pack(side=LEFT)
 
-        self.codec1 = Button(frameRow1, text="MP3", command=self.codec1)
-        self.codec1.pack(side=LEFT,pady=(15, 20))
+        self.codec1 = Button(frameRow1, text="MP3", command=self.codec1,relief=FLAT)
+        self.codec1.pack(side=LEFT,pady=(18, 20))
 
-        self.codec2 = Button(frameRow1, text="WAV", command=self.codec2)
-        self.codec2.pack(side=LEFT,pady=(15, 20))
+        self.codec2 = Button(frameRow1, text="WAV", command=self.codec2,relief=FLAT)
+        self.codec2.pack(side=LEFT,pady=(18, 20))
 
         frameRow2 = Frame(root)
         frameRow2.pack()
 
-        self.download_button = Button(frameRow2, text="Download", command=self.download)
+        self.download_button = Button(frameRow2, text="Download", command=self.download,relief=FLAT)
         self.download_button.pack(side=LEFT,padx=(10, 10))
         self.download_button.bind("<ButtonPress-1>", self.handle_click)
 
-        self.close_button = Button(frameRow2, text="Close", command=master.quit)
+        self.close_button = Button(frameRow2, text="Close", command=master.quit,relief=FLAT)
         self.close_button.pack(side=LEFT,padx=(10, 10))
 
         bottomFrame=Frame(root)
